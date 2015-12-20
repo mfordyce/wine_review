@@ -6,23 +6,23 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Wine.create(name: 'Old Vine Red Lot Number 42', year: 2006,
-  winery: 'Marietta Cellars', varietal: 'California Red Wine',
+  winery: 'Marietta Cellars', varietal: 'Red Blend',
   country: 'USA')
 
 Wine.create(name:'Pinot Evil', year: 2005,
   winery: 'Vin de Pays de l\'isle de Beaute', varietal: 'Pino Noir',
-  country: 'France')
+  countryl: 'France')
 
-Wine.create(name:'Petit Manseng', year: 2006,
-  winery: 'White Hall Vineyards', varietal: 'Virginia Table Wine',
+Wine.create(name:'Domaine Chatelain Petit Chablis', year: 2006,
+  winery: 'French Vineyards', varietal: 'Chardonnay',
   country: 'USA')
 
 Wine.create(name:'Saffire', year: 2003,
-  winery: 'AM Rhine', varietal: 'White Wine Blend',
+  winery: 'AM Rhine', varietal: 'Chardonnay',
   country: 'USA')
 
 Wine.create(name:'Late Harvest Vidal Blanc', year: 2005,
-  winery: 'First Colony Winery', varietal: 'Vidal Blanc',
+  winery: 'First Colony Winery', varietal: 'White Blend',
   country: 'USA')
 
 Wine.create(name:'De Chiel Reserve Merlot', year: 2006,
@@ -30,11 +30,11 @@ Wine.create(name:'De Chiel Reserve Merlot', year: 2006,
   country: 'USA')
 
 Wine.create(name:'Ruffino Chianti', year: 2013,
-  winery: 'Casa Vinicola Ruffino', varietal: 'Red Wine',
+  winery: 'Casa Vinicola Ruffino', varietal: 'Chianti',
   country: 'Italy')
 
 Wine.create(name:'Sangiovese', year: 2013,
-  winery: 'Conti Torraiolo', varietal: 'Red Wine',
+  winery: 'Conti Torraiolo', varietal: 'Sangiovese',
   country: 'Italy')
 
 

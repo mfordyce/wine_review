@@ -6,7 +6,7 @@ class WinesController < ApplicationController
 
   def index
     @available_at = Time.now
-    @wines = Wine.all
+    @wines = Wine.order(:name).page(params[:page])
   end
 
   def show
@@ -19,8 +19,11 @@ class WinesController < ApplicationController
 
   def create
     @wine = Wine.new(wine_params)
-    @wine.save
-    redirect_to @wine
+    if @wine.save
+      redirect_to @wine, notice: "#{@wine.name} was created!"
+    else
+      render :new
+    end
   end
 
 
@@ -29,11 +32,17 @@ class WinesController < ApplicationController
 
   end
 
+
   def update
 
-    @wine.update(wine_params)
-    redirect_to @wine
+    if @wine.update(wine_params)
+      redirect_to @wine, notice: "#{@wine.name} was updated!"
+    else
+      render :edit
+    end
+
   end
+
 
 
   def destroy
